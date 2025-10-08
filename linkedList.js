@@ -1,6 +1,6 @@
 class LinkedList {
-  contructor() {
-    //
+  constructor() {
+    this.headNode = null;
   }
 
   append(value) {
