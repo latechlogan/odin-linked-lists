@@ -28,7 +28,13 @@ class LinkedList {
   }
 
   tail() {
-    // returns the last node in the list
+    let current = this.headNode;
+
+    while (current.nextNode !== null) {
+      current = current.nextNode;
+    }
+
+    return current;
   }
 
   at(index) {
