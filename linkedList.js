@@ -8,7 +8,7 @@ class LinkedList {
   }
 
   prepend(value) {
-    // adds a new node containing value to the start of the list
+    this.headNode = new Node(value, this.headNode);
   }
 
   size() {
