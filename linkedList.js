@@ -49,11 +49,14 @@ class LinkedList {
       currentNode = currentNode.nextNode;
     }
 
-    return "The index you're requesting does not exist.";
+    return "Error: The index you're requesting does not exist.";
   }
 
   pop() {
-    // removes the last element from the list
+    let length = this.size();
+    let newTail = this.at(length - 2);
+    newTail.nextNode = null;
+    return "Tail node removed successfully.";
   }
 
   contains(value) {
