@@ -16,7 +16,7 @@ class LinkedList {
   }
 
   head() {
-    // returns the first node in the list
+    return this.headNode;
   }
 
   tail() {
