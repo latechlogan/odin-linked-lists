@@ -38,7 +38,18 @@ class LinkedList {
   }
 
   at(index) {
-    // returns the node at the given index
+    let currentIndex = 0;
+    let currentNode = this.headNode;
+
+    while (currentNode !== null) {
+      if (index === currentIndex) {
+        return currentNode;
+      }
+      currentIndex++;
+      currentNode = currentNode.nextNode;
+    }
+
+    return "The index you're requesting does not exist.";
   }
 
   pop() {
