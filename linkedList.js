@@ -60,7 +60,16 @@ class LinkedList {
   }
 
   contains(value) {
-    // returns true if the passed in value is in the list and otherwise returns false
+    let current = this.headNode;
+
+    while (current !== null) {
+      if (current.value === value) {
+        return true;
+      }
+      current = current.nextNode;
+    }
+
+    return false;
   }
 
   find(value) {
