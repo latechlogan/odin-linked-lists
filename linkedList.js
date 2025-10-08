@@ -49,7 +49,7 @@ class LinkedList {
       currentNode = currentNode.nextNode;
     }
 
-    return "Error: The index you're requesting does not exist.";
+    return "Error: The index you're searching for does not exist.";
   }
 
   pop() {
@@ -73,7 +73,18 @@ class LinkedList {
   }
 
   find(value) {
-    // returns the index of the node containing value, or null if not found
+    let currentIndex = 0;
+    let currentNode = this.headNode;
+
+    while (currentNode !== null) {
+      if (currentNode.value === value) {
+        return currentIndex;
+      }
+      currentIndex++;
+      currentNode = currentNode.nextNode;
+    }
+
+    return "Error: The value you're searching for does not exist.";
   }
 
   toString() {
