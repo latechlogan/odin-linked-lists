@@ -12,7 +12,15 @@ class LinkedList {
   }
 
   size() {
-    // returns the total number of nodes in the list
+    let count = 0;
+    let current = this.headNode;
+
+    while (current !== null) {
+      ++count;
+      current = current.nextNode;
+    }
+
+    return count;
   }
 
   head() {
