@@ -4,7 +4,7 @@ class LinkedList {
   }
 
   append(value) {
-    // adds a new node containing value to the end of the list
+    this.tail().nextNode = new Node(value);
   }
 
   prepend(value) {
