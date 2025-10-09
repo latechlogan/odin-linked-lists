@@ -4,6 +4,11 @@ class LinkedList {
   }
 
   append(value) {
+    if (this.headNode === null) {
+      this.headNode = new Node(value);
+      return;
+    }
+
     this.tail().nextNode = new Node(value);
   }
 
@@ -30,11 +35,14 @@ class LinkedList {
   tail() {
     let current = this.headNode;
 
-    while (current.nextNode !== null) {
+    while (current !== null) {
+      if (current.nextNode === null) {
+        return current;
+      }
       current = current.nextNode;
     }
 
-    return current;
+    return "Error: The list is empty.";
   }
 
   at(index) {
@@ -107,4 +115,9 @@ class Node {
   }
 }
 
-export { LinkedList };
+const list = new LinkedList();
+
+list.append("apple");
+console.log(list.tail());
+
+export { LinkedList, Node };
