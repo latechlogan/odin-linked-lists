@@ -115,9 +115,4 @@ class Node {
   }
 }
 
-const list = new LinkedList();
-
-list.append("apple");
-console.log(list.tail());
-
 export { LinkedList, Node };
